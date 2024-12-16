@@ -1,38 +1,35 @@
 package com.example.event_calendar.event_calendar.controller;
 
-import org.springframework.http.HttpStatus;
+import com.example.event_calendar.event_calendar.repository.UserRepository;
+import com.example.event_calendar.event_calendar.dto.LoginRequest;
+import com.example.event_calendar.event_calendar.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.example.event_calendar.event_calendar.Entity.User;
-import com.example.event_calendar.event_calendar.Repository.userRepository;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/user")
-public class usercontroller {
+@RequestMapping("/user")
+public class UserController {
 
-    private final userRepository UserRepository;
+    private final UserRepository userRepository;
 
-    public usercontroller(userRepository UserRepository) {
-        this.UserRepository = UserRepository;
+    @Autowired
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
-    @PostMapping("/signup") //회원가입입
-    public ResponseEntity<String> signUp(@RequestBody User user) {
-        UserRepository.save(user); 
-        return ResponseEntity.ok("회원가입이 완료되었습니다.");
-    }
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
+        Optional<User> user = userRepository.findByNameAndPassword(
+            loginRequest.getUsername(), loginRequest.getPassword()
+        );
 
-    @PostMapping("/login") //로그인
-    public ResponseEntity<String> login(@RequestBody User loginRequest) {
-    java.util.Optional<User> user1 = userRepository.findByNameAndPhone(loginRequest.getName(), loginRequest.getPhone());
-    if (user1.isPresent()) {
-        return ResponseEntity.ok("로그인 성공!");
-    } else {
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("로그인 실패!");
+        if (user.isPresent()) {
+            return ResponseEntity.ok("Login successful");
+        } else {
+            return ResponseEntity.status(401).body("Invalid credentials");
+        }
     }
-}
 }

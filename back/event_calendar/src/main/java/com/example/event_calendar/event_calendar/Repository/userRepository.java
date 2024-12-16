@@ -9,7 +9,5 @@ import com.example.event_calendar.event_calendar.Entity.User;
 
 @Repository
 public interface userRepository extends JpaRepository<User, Long> {
-    static Optional<User> findByNameAndPhone(String name, String phone) {
-        throw new UnsupportedOperationException("Unimplemented method 'findByNameAndPhone'");
-    }
+    Optional<User> findByNameAndPhone(String name, String phone);
 }
