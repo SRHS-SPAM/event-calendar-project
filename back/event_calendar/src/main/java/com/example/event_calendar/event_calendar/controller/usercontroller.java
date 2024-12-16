@@ -22,7 +22,7 @@ public class usercontroller {
 
     @PostMapping("/signup") //회원가입입
     public ResponseEntity<String> signUp(@RequestBody User user) {
-        UserRepository.save(user); // Use the custom User class
+        UserRepository.save(user); 
         return ResponseEntity.ok("회원가입이 완료되었습니다.");
     }
 
