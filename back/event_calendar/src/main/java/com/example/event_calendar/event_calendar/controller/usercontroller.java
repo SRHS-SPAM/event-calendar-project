@@ -1,35 +1,30 @@
 package com.example.event_calendar.event_calendar.controller;
 
-import com.example.event_calendar.event_calendar.repository.UserRepository;
-import com.example.event_calendar.event_calendar.dto.LoginRequest;
-import com.example.event_calendar.event_calendar.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
+import com.example.event_calendar.event_calendar.Service.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController {
 
-    private final UserRepository userRepository;
-
     @Autowired
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    private UserService userService;
+
+    @PostMapping("/signup") //회원가입
+    public String registerUser(
+            @RequestParam String name,
+            @RequestParam String phoneNumber,
+            @RequestParam String birthday
+            ){
+        return userService.registerUser(name, phoneNumber, birthday);
     }
 
-    @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
-        Optional<User> user = userRepository.findByNameAndPassword(
-            loginRequest.getUsername(), loginRequest.getPassword()
-        );
+    @PostMapping("/login") //로그인
+    public String loginUser(
+        @RequestParam(required = false) String name,
+        @RequestParam(required = false) String phoneNumber) {
+    return userService.loginUser(name, phoneNumber);
+}
 
-        if (user.isPresent()) {
-            return ResponseEntity.ok("Login successful");
-        } else {
-            return ResponseEntity.status(401).body("Invalid credentials");
-        }
-    }
 }

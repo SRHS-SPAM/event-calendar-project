@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class datecontroller {  //오늘 날짜 가져오는 코드드
+public class DateController {  //오늘 날짜 가져오는 코드드
     @GetMapping("/date")
     public ResponseEntity<String> getCurrentData() {
         LocalDate today = LocalDate.now();
-        System.out.println(today); //2024-12-15 같은 형식으로 뜸뜸
+        System.out.println(today); //2024-12-15 같은 형식으로 뜸
         return ResponseEntity.ok(today.toString());
     }
 }
