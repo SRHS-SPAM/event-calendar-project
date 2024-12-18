@@ -1,16 +1,21 @@
 "use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { use } from "react";
 
-export default function Read(props: any) {
+type Props = {
+  params: Promise<{
+    id: string;
+  }>;
+};
+
+export default function Read({ params }: Props) {
   const pathname = usePathname();
-
-  console.log(pathname);
+  const Params = use(params); 
 
   return (
     <>
-      <h2>Read</h2>
-      <h1>{pathname}</h1>
+    <h1>January.{Params.id}</h1>
     </>
   );
 }
