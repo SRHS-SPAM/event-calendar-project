@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { use } from "react";
 
 type Props = {
-  params: Promise<{
+    params: Promise<{
     id: string;
   }>;
 };
