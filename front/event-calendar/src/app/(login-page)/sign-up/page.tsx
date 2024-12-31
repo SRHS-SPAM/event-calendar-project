@@ -38,7 +38,7 @@ export const registerUser = async (username: string, password: string, email: st
   } catch (error: any) {
     // 에러 발생 시 에러 메시지 반환
     throw error.response?.data?.message || "Registration failed";
-  }
+  } 
 };
 
 
