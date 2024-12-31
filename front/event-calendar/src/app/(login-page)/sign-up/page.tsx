@@ -19,7 +19,7 @@ const PlaywriteAUNSW = Playwrite_AU_NSW({ weight: "400" });
 import axios from "axios";
 
 // API 기본 URL 설정 (백엔드 서버의 주소)
-const API_BASE_URL = "http://localhost:8080/users";
+const API_BASE_URL = "/api/users/"; ;
 
 // Axios 인스턴스 생성
 const apiClient = axios.create({
@@ -30,16 +30,41 @@ const apiClient = axios.create({
 });
 
 // 회원가입 API 호출 함수
-export const registerUser = async (username: string, password: string, email: string) => {
-  try {
-    // POST 요청으로 데이터를 백엔드로 전송
-    const response = await apiClient.post("/register", { username, password, email });
-    return response.data; // 서버 응답 데이터 반환
-  } catch (error: any) {
-    // 에러 발생 시 에러 메시지 반환
-    throw error.response?.data?.message || "Registration failed";
-  } 
-};
+export default function SignUp() {
+  const [date, setDate] = React.useState<Date | null>(null);
+  const [name, setName] = React.useState("");
+  const [phoneNumber, setPhoneNumber] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+
+  const handleSignUp = async () => {
+      if (!name || !phoneNumber || !date || !email || !password) {
+          alert("모든 필드를 입력해주세요.");
+          return;
+      }
+
+      try {
+          const formattedDate = format(date, "yyyy-MM-dd"); // 날짜 형식 변환
+          const response = await apiClient.post("/", { // POST 요청 URL 수정, 데이터 추가
+              action: "register",
+              username: name,
+              password: password,
+              email: email,
+              birthday: formattedDate, // 생일 데이터 추가
+          });
+
+          if (response.data.success) {
+             alert("회원가입 성공!");
+             // 로그인 페이지로 이동 등의 추가 작업
+          } else {
+            alert(response.data.message); // 오류 메시지 표시
+          }
+      } catch (error: any) {
+          console.error("Registration failed:", error);
+          alert("회원가입 실패: " + (error?.response?.data?.message || "알 수 없는 오류")); // 에러 메시지 표시
+      }
+  };
 
 
 export default function SignUp() {
