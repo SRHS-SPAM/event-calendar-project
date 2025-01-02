@@ -33,13 +33,12 @@ const apiClient = axios.create({
 export default function SignUp() {
   const [date, setDate] = React.useState<Date | null>(null);
   const [name, setName] = React.useState("");
-  const [phoneNumber, setPhoneNumber] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
 
   const handleSignUp = async () => {
-      if (!name || !phoneNumber || !date || !email || !password) {
+      if (!name || !date || !email || !password) {
           alert("모든 필드를 입력해주세요.");
           return;
       }
@@ -96,15 +95,23 @@ export default function SignUp() {
           placeholder="Name" 
           className="w-full h-12 mb-4"
           value={name}
-          onChange={(e) => setName(e.target.value)} />
+          onChange={(e) => setName(e.target.value)} 
+          />
 
           <Input
-            placeholder="Phone number"
+            placeholder="email"
             className="w-full h-12 mb-4"
-            type="tel"
-            maxLength={13}
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <Input 
+          placeholder="Password" 
+          className="w-full h-12 mb-4"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)} 
           />
           
 
@@ -134,7 +141,10 @@ export default function SignUp() {
             </Popover>
           </div>
 
-          <Button className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600">
+          <Button 
+          className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600"
+          onClick={handleSignUp}
+          >
             Sign Up
           </Button>
         </div>
