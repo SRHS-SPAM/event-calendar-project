@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from back.back.catalog import views
+from catalog import views
 
 urlpatterns = [
     path('api/user/', views.validate_and_process_user, name='validate_and_process_user'),
