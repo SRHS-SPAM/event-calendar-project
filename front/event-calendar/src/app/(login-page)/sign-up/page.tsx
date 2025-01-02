@@ -66,10 +66,6 @@ export default function SignUp() {
       }
   };
 
-
-export default function SignUp() {
-  const [date, setDate] = React.useState<Date | null>(null);
-
   return (
     <div className="w-full h-full absolute z-10">
       {/* Background Image */}
@@ -96,12 +92,19 @@ export default function SignUp() {
         <div className="w-[30vw] h-[60vh] rounded-xl shadow-2xl bg-white/50 relative p-6">
           <h2 className="text-3xl font-bold text-center mb-6">Sign Up</h2>
           
-          <Input placeholder="Name" className="w-full h-12 mb-4" />
+          <Input 
+          placeholder="Name" 
+          className="w-full h-12 mb-4"
+          value={name}
+          onChange={(e) => setName(e.target.value)} />
+
           <Input
             placeholder="Phone number"
             className="w-full h-12 mb-4"
             type="tel"
             maxLength={13}
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
           />
           
 
