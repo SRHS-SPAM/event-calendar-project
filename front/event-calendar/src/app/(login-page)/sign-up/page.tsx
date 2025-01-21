@@ -114,22 +114,22 @@ export default function SignUp() {
           onChange={(e) => setPassword(e.target.value)} 
           />
 
-          <div className="w-full h-12 mb-4">
+          <div className="w-full h-12 mb-4 flex justify-center place-content-evenly">
             <Input 
             placeholder="year(ex.2008)" 
-            className="w-auto h-10"
+            className="w-full"
             type="text"
             />
             <p>-</p>
             <Input 
             placeholder="month(ex.06)" 
-            className="w-auto h-10"
+            className="w-full"
             type="text"
             />
             <p>-</p>
             <Input 
             placeholder="date(ex.09)" 
-            className="w-auto h-10"
+            className="w-full"
             type="text"
             />
           </div>
