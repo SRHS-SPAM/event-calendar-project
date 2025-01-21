@@ -113,10 +113,25 @@ export default function SignUp() {
           value={password}
           onChange={(e) => setPassword(e.target.value)} 
           />
+
+          <div>
+            <select name="년" id="1">
+              <option value=""></option>
+              <option value="2008">2008</option>
+            </select>
+            <select name="월" id="2">
+              <option value="6">6</option>
+            </select>
+            <select name="일" id="3">
+              <option value="9">9</option>
+            </select>
+          </div>
+
+          
           
 
           {/* Calendar Input */}
-          <div className="w-full h-12 mb-4">
+          {/* <div className="w-full h-12 mb-4">
             <Popover>
               <PopoverTrigger asChild>
                 <Button
@@ -139,7 +154,7 @@ export default function SignUp() {
                 />
               </PopoverContent>
             </Popover>
-          </div>
+          </div> */}
 
           <Button 
           className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600"
