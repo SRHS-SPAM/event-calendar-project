@@ -114,17 +114,24 @@ export default function SignUp() {
           onChange={(e) => setPassword(e.target.value)} 
           />
 
-          <div>
-            <select name="년" id="1">
-              <option value=""></option>
-              <option value="2008">2008</option>
-            </select>
-            <select name="월" id="2">
-              <option value="6">6</option>
-            </select>
-            <select name="일" id="3">
-              <option value="9">9</option>
-            </select>
+          <div className="w-full h-12 mb-4">
+            <Input 
+            placeholder="year(ex.2008)" 
+            className="w-auto h-10"
+            type="text"
+            />
+            <p>-</p>
+            <Input 
+            placeholder="month(ex.06)" 
+            className="w-auto h-10"
+            type="text"
+            />
+            <p>-</p>
+            <Input 
+            placeholder="date(ex.09)" 
+            className="w-auto h-10"
+            type="text"
+            />
           </div>
 
           
