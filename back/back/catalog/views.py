@@ -70,6 +70,7 @@ def validate_and_process_user(request):
 
     return JsonResponse({'success': False, 'message': "허용되지 않은 요청 방식입니다."}, status=405)
 
+#날짜 보내주는 코드
 from django.http import JsonResponse
 from datetime import datetime
 
