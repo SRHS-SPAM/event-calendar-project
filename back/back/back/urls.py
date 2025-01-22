@@ -20,6 +20,6 @@ from django.urls import path
 from catalog import views
 
 urlpatterns = [
-    path('api/user/', views.validate_and_process_user, name='validate_and_process_user'),
-    path('api/current-date/', views.get_current_date, name='current_date'),
+    path('api/user/', views.validate_and_process_user, name='validate_and_process_user'), #회원가입
+    path('api/current-date/', views.get_current_date, name='current_date'), #날짜
 ]
