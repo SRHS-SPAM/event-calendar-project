@@ -2,16 +2,9 @@
 
 import React from "react";
 import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { Playwrite_AU_NSW } from "next/font/google";
 
 const PlaywriteAUNSW = Playwrite_AU_NSW({ weight: "400" });
@@ -35,34 +28,38 @@ export default function SignUp() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [year, setYear] = React.useState("");
+  const [month, setMonth] = React.useState("");
+  const [day, setDay] = React.useState("");
 
 
   const handleSignUp = async () => {
-      if (!name || !date || !email || !password) {
-          alert("모든 필드를 입력해주세요.");
-          return;
-      }
+    if (!name || !email || !password || !year || !month || !day) {
+      alert("모든 필드를 입력해주세요.");
+      return;
+    }
+
+    const birthday = `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
 
       try {
-          const formattedDate = format(date, "yyyy-MM-dd"); // 날짜 형식 변환
-          const response = await apiClient.post("/", { // POST 요청 URL 수정, 데이터 추가
-              action: "register",
-              username: name,
-              password: password,
-              email: email,
-              birthday: formattedDate, // 생일 데이터 추가
-          });
+          const response = await axios.post(API_BASE_URL, {
+        action: "register",
+        username: name,
+        password: password,
+        email: email,
+        birthday: birthday, // 날짜 추가
+      });
 
-          if (response.data.success) {
-             alert("회원가입 성공!");
-             // 로그인 페이지로 이동 등의 추가 작업
-          } else {
-            alert(response.data.message); // 오류 메시지 표시
-          }
-      } catch (error: any) {
-          console.error("Registration failed:", error);
-          alert("회원가입 실패: " + (error?.response?.data?.message || "알 수 없는 오류")); // 에러 메시지 표시
+      if (response.data.success) {
+          alert("회원가입 성공!");
+          // 로그인 페이지로 이동 등의 추가 작업
+      } else {
+        alert(response.data.message); // 오류 메시지 표시
       }
+    } catch (error: any) {
+        console.error("Registration failed:", error);
+        alert("회원가입 실패: " + (error?.response?.data?.message || "알 수 없는 오류")); // 에러 메시지 표시
+    }
   };
 
   return (
@@ -113,32 +110,31 @@ export default function SignUp() {
           value={password}
           onChange={(e) => setPassword(e.target.value)} 
           />
-          
 
-          {/* Calendar Input */}
-          <div className="w-full h-12 mb-4">
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  variant={"outline"}
-                  className={cn(
-                    "w-full h-full justify-start text-left font-normal",
-                    !date && "text-muted-foreground"
-                  )}
-                >
-                  <CalendarIcon className="mr-2" />
-                  {date ? format(date, "PPP") : <span>Pick a Birthday</span>}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0">
-                <Calendar
-                  mode="single"
-                  selected={date || undefined} // Convert null to undefined
-                  onSelect={(selectedDate) => setDate(selectedDate || null)} // Ensure null fallback for undefined
-                  initialFocus
-                />
-              </PopoverContent>
-            </Popover>
+          <div className="w-full h-12 mb-4 flex justify-center place-content-around">
+            <Input 
+            placeholder="YYYY" 
+            className="w-full h-full"
+            type="number"
+            maxLength={4}
+            value={year} onChange={(e) => setYear(e.target.value)}
+            />
+            <p className="w-[40%] h-full flex justify-center items-center text-xl ">-</p>
+            <Input 
+            placeholder="MM" 
+            className="w-full h-full"
+            type="number"
+            maxLength={2}
+            value={month} onChange={(e) => setMonth(e.target.value)}
+            />
+            <p className="w-[40%] h-full flex justify-center items-center text-xl">-</p>
+            <Input 
+            placeholder="DD" 
+            className="w-full h-full"
+            type="number"
+            maxLength={2}
+            value={day} onChange={(e) => setDay(e.target.value)}
+            />
           </div>
 
           <Button 
