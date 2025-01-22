@@ -115,20 +115,25 @@ export default function SignUp() {
             <Input 
             placeholder="YYYY" 
             className="w-full h-full"
-            type="text"
+            type="number"
+            maxLength={4}
             value={year} onChange={(e) => setYear(e.target.value)}
             />
             <p className="w-[40%] h-full flex justify-center items-center text-xl ">-</p>
             <Input 
             placeholder="MM" 
             className="w-full h-full"
-            type="text"
+            type="number"
+            maxLength={2}
+            value={month} onChange={(e) => setMonth(e.target.value)}
             />
             <p className="w-[40%] h-full flex justify-center items-center text-xl">-</p>
             <Input 
             placeholder="DD" 
             className="w-full h-full"
-            type="text"
+            type="number"
+            maxLength={2}
+            value={day} onChange={(e) => setDay(e.target.value)}
             />
           </div>
 
