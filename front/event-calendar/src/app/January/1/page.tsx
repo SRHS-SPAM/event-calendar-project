@@ -1,13 +1,13 @@
 "use client";
 
 import axios from "axios";
-import { Playwrite_AU_NSW } from "next/font/google";
+import { Black_Han_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 // API 기본 URL 설정 (백엔드 서버의 주소)
 const API_BASE_URL = "/api/users/";
 
-const PlaywriteAUNSW = Playwrite_AU_NSW({ weight: "400" });
+const PlaywriteAUNSW = Black_Han_Sans({ weight: "400" });
 
 // Axios 인스턴스 생성
 const apiClient = axios.create({
@@ -20,8 +20,8 @@ const apiClient = axios.create({
 // 회원가입 API 호출 함수
 export default function J1() {
   return (
-    <div>
-      <div className="">
+    <div className="h-[100vh] w-[100vw]">
+      <div className="h-full w-full flex justify-center items-center">
         <h2
           className={cn(
             "h-40 w-full flex items-center justify-center text-6xl font-bold",
