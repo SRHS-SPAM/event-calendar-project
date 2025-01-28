@@ -23,26 +23,33 @@ export default function J1() {
     <div className="h-[100vh] w-[100vw]">
       <div className="h-full w-full absolute inset-0 -z-10">
           <img
-            src="/backimg.png"
+            src="/win-bg.png"
             alt="Background"
             className="w-full h-full object-cover"
           />
       </div>
       <div className="h-full w-full flex justify-center items-center">
-        <div>
-          <h2
-            className={cn(
-              "h-10 w-full flex items-center justify-center text-4xl",
-              PlaywriteAUNSW.className
-            )}>1월 1일</h2>
+        <div className="pt-36">
+          
           <h1
             className={cn(
-              "h-40 w-full flex items-center justify-center text-7xl font-bold",
+              "h-40 w-full flex items-center justify-center text-9xl font-bold text-cyan-500",
               PlaywriteAUNSW.className
             )}>사과 선물하기의 날</h1>
+            <h2
+            className={cn(
+              "h-10 w-full flex items-center justify-center text-7xl text-cyan-500",
+              PlaywriteAUNSW.className
+            )}>1월 1일</h2>
+        </div>
+        <div className="h-auto w-auto absolute inset-0 -z-10">
+            <img
+              src="/apple1.png"
+              alt="Background"
+              className="w-full h-full object-cover"
+            />
         </div>
       </div>
-      
       
     </div>
   );
