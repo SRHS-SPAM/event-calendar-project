@@ -40,12 +40,13 @@ def validate_and_process_user(request):
             username = data.get('username')
             password = data.get('password')
             email = data.get('email', '')
+            birthday = data.get('birthday', '')
 
             if action == 'register':
                 # 회원가입 처리
                 if User.objects.filter(email=email).exists():
                     return JsonResponse({'success': False, 'message': "이미 있는 이메일입니다."}, status=400)
-                user = User.objects.create_user(username=username, password=password, email=email)
+                user = User.objects.create_user(username=username, password=password, email=email, birthday=birthday)
                 user.save()
                 return JsonResponse({'success': True, 'message': "회원가입에 성공했습니다."}, status=201)
 
