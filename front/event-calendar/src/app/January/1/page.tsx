@@ -22,17 +22,20 @@ export default function J1() {
   return (
     <div className="h-[100vh] w-[100vw]">
       <div className="h-full w-full flex justify-center items-center">
-        <h2
-          className={cn(
-            "h-40 w-full flex items-center justify-center text-6xl font-bold",
-            PlaywriteAUNSW.className
-          )}>1월 1일</h2>
-        <h1
-          className={cn(
-            "h-40 w-full flex items-center justify-center text-6xl font-bold",
-            PlaywriteAUNSW.className
-          )}>사과 선물하기의 날</h1>
+        <div>
+          <h2
+            className={cn(
+              "h-10 w-full flex items-center justify-center text-4xl",
+              PlaywriteAUNSW.className
+            )}>1월 1일</h2>
+          <h1
+            className={cn(
+              "h-40 w-full flex items-center justify-center text-7xl font-bold",
+              PlaywriteAUNSW.className
+            )}>사과 선물하기의 날</h1>
+        </div>
       </div>
+      
       
     </div>
   );
