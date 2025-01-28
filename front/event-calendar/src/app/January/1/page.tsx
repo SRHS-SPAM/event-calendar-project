@@ -42,11 +42,11 @@ export default function J1() {
               PlaywriteAUNSW.className
             )}>1월 1일</h2>
         </div>
-        <div className="h-auto w-auto absolute inset-0 -z-10">
+        <div className="h-[100%] w-[80%] absolute inset-0 -z-10 ml-[10%]">
             <img
               src="/apple1.png"
               alt="Background"
-              className="w-full h-full object-cover"
+              className="w-full h-full"
             />
         </div>
       </div>
