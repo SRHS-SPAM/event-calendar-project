@@ -12,7 +12,7 @@ const PlaywriteAUNSW = Playwrite_AU_NSW({ weight: "400" });
 import axios from "axios";
 
 // API 기본 URL 설정 (백엔드 서버의 주소)
-const API_BASE_URL = "/api/users/"; ;
+const API_BASE_URL = 'api/user/';
 
 // Axios 인스턴스 생성
 const apiClient = axios.create({
@@ -24,7 +24,6 @@ const apiClient = axios.create({
 
 // 회원가입 API 호출 함수
 export default function SignUp() {
-  const [date, setDate] = React.useState<Date | null>(null);
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -41,8 +40,8 @@ export default function SignUp() {
 
     const birthday = `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
 
-      try {
-          const response = await axios.post(API_BASE_URL, {
+    try {
+        const response = await axios.post(API_BASE_URL, {
         action: "register",
         username: name,
         password: password,
