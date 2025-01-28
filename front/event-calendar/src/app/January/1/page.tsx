@@ -21,6 +21,13 @@ const apiClient = axios.create({
 export default function J1() {
   return (
     <div className="h-[100vh] w-[100vw]">
+      <div className="h-full w-full absolute inset-0 -z-10">
+          <img
+            src="/backimg.png"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+      </div>
       <div className="h-full w-full flex justify-center items-center">
         <div>
           <h2
