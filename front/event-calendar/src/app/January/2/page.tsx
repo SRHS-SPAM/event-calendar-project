@@ -70,14 +70,14 @@ export default function J1() {
               className="w-full h-full"
             />
         </div>  
-        <div className="h-[70%] w-[30%] absolute inset-0 -z-10 mt-[9%] ml-[4%] -rotate-12 opacity-80">
+        <div className="h-[75%] w-[35%] absolute inset-0 -z-10 mt-[7%] ml-[1.5%] -rotate-12 opacity-80">
             <img
               src="/bim.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[40%] w-[20%] absolute inset-0 -z-10 ml-[8%] mt-[11%] -rotate-12">
+        <div className="h-[40%] w-[20%] absolute inset-0 -z-10 ml-[9%] mt-[15%] -rotate-12">
             <img
               src="/cat.png" //이미지
               alt="Background"
