@@ -51,21 +51,21 @@ export default function J1() {
         </div>
         <div className="h-auto w-[28%] absolute inset-0 -z-10 mr-[80%]">
             <img
-              src="/appletree.png" //이미지
+              src="/rockk.png" //이미지
+              alt="Background"
+              className="w-full h-full"
+            />
+        </div> 
+        <div className="h-[40%] w-[14%] absolute inset-0 -z-5 ml-[86%] mt-[9%]">
+            <img
+              src="/likegirl.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[50%] w-[28%] absolute inset-0 -z-10 ml-[70%] mt-[27%]">
+        <div className="h-[50%] w-[28%] absolute inset-0 -z-1 ml-[67%] mt-[27%]">
             <img
-              src="/gu.png" //이미지
-              alt="Background"
-              className="w-full h-full"
-            />
-        </div>
-        <div className="h-[50%] w-[24%] absolute inset-0 -z-10 mr-[30%]">
-            <img
-              src="/apple2.png" //이미지
+              src="/rocknroll.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
@@ -77,21 +77,13 @@ export default function J1() {
               className="w-full h-full"
             />
         </div>
-        <div className="h-[45%] w-[30%] absolute inset-0 -z-10 ml-[70%] ">
+        <div className="h-[45%] w-[30%] absolute inset-0 -z-10 ml-[70%]">
             <img
-              src="/appleff.png" //이미지
+              src="/gu.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[45%] w-auto absolute inset-0 -z-10 ml-[68%] mt-[5%]">
-            <img
-              src="/applef.png" //이미지
-              alt="Background"
-              className="w-full h-full"
-            />
-        </div>
-        
       </div>
       
     </div>
