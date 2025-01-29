@@ -37,56 +37,35 @@ export default function J1() {
           className={cn(
             "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[15%] text-white",
             PlaywriteAUNSW.className
-          )}>Apple Gifting Day</h1>
+          )}>Science Fiction Day</h1>
           <h2
           className={cn(
             "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%] text-white",
             PlaywriteAUNSW.className
-          )}>Jan. 1st</h2>
+          )}>Jan. 2st</h2>
           <p
           className={cn(
             "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%] text-white",
             NanumBrushScript.className
-          )}>빨간 사과 먹기의 날</p>
+          )}>SF의 날</p>
         </div>
-        <div className="h-auto w-[28%] absolute inset-0 -z-10 mr-[80%]">
+        <div className="h-[35%] w-[30%] absolute inset-0 -z-10 mr-[30%] -rotate-12">
             <img
-              src="/appletree.png" //이미지
+              src="/ufo.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[50%] w-[28%] absolute inset-0 -z-10 ml-[70%] mt-[22%]">
+        <div className="h-[60%] w-[28%] absolute inset-0 -z-10 ml-[71%] mt-[17%]">
             <img
-              src="/a99le.png" //이미지
+              src="/spsu.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[50%] w-[28%] absolute inset-0 -z-10 mr-[30%]">
+        <div className="h-[40%] w-[20%] absolute inset-0 -z-10 ml-[60%] mt-[25%]">
             <img
-              src="/apple2.png" //이미지
-              alt="Background"
-              className="w-full h-full"
-            />
-        </div>
-        <div className="h-auto w-[25%] absolute inset-0 -z-10 ml-[7%] mt-[30%]">
-            <img
-              src="/bppple.png" //이미지
-              alt="Background"
-              className="w-full h-full"
-            />
-        </div>
-        <div className="h-[45%] w-[30%] absolute inset-0 -z-10 ml-[70%] ">
-            <img
-              src="/appleff.png" //이미지
-              alt="Background"
-              className="w-full h-full"
-            />
-        </div>
-        <div className="h-[45%] w-auto absolute inset-0 -z-10 ml-[68%] mt-[5%]">
-            <img
-              src="/applef.png" //이미지
+              src="/sprobot.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
