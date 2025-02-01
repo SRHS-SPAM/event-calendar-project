@@ -26,7 +26,7 @@ export default function J1() {
     <div className="h-[100vh] w-[100vw]">
       <div className="h-full w-full absolute inset-0 -z-10 opacity-60">
           <img
-            src="/temback.jpg"
+            src="/solguback.png"
             alt="Background"
             className="w-full h-full object-cover"
           />
@@ -51,35 +51,35 @@ export default function J1() {
         </div>
         <div className="h-[35%] w-[30%] absolute inset-0 -z-10 ml-[8%] mt-[2%]">
             <img
-              src="/tem5.png" //이미지
+              src="/solgu1.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div> 
-        <div className="h-[35%] w-[22%] absolute inset-0 -z-5 mr-[94%] mt-[12%]">
+        <div className="h-[35%] w-[22%] absolute inset-0 -z-5 mr-[94%] mt-[14%]">
             <img
-              src="/tem4.png" //이미지
+              src="/solgu3.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60%] mt-[21%]">
+        <div className="h-[70%] w-[55%] absolute inset-0 -z-10 ml-[45%] mt-[16%]">
             <img
-              src="/tem1.png" //이미지
+              src="/solgu4.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
         <div className="h-auto w-[42%] absolute inset-0 -z-10 ml-[%] mt-[23%]">
             <img
-              src="/tem2.png" //이미지
+              src="/solgu2.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[45%] w-[41%] absolute inset-0 -z-10 ml-[59%] mt-[2%]">s
+        <div className="h-[35%] w-[31%] absolute inset-0 -z-10 ml-[67%] mt-[2%]">
             <img
-              src="/tem3.png" //이미지
+              src="/solgu5.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
