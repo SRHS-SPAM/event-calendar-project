@@ -70,6 +70,20 @@ export default function J1() {
               className="w-full h-full"
             />
         </div>
+        <div className="h-[70%] w-[48%] absolute inset-0 -z-10 mt-[25vh] ml-[50vw] scale-x-[-1]">
+            <img
+              src="/retriver2.png" //이미지
+              alt="retriver"
+              className="w-full h-full"
+            />
+        </div>
+        <div className="h-[30%] w-[35%] absolute inset-0 -z-10 scale-x-[-1] scale-y-[-1] ml-[143vh]">
+            <img
+              src="/paper2.png" //이미지
+              alt="paper1"
+              className="w-full h-full"
+            />
+        </div>
         
 
 
