@@ -26,7 +26,7 @@ export default function J1() {
     <div className="h-[100vh] w-[100vw]">
       <div className="h-full w-full absolute inset-0 -z-10 opacity: 0.7">
           <img
-            src="/bridsback.png"
+            src="/sky.png"
             alt="Background"
             className="w-full h-full object-cover"
           />
@@ -35,54 +35,57 @@ export default function J1() {
         <div className="pt-36">
           <h1
           className={cn(
-            "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[15%]",
+            "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[15%] text-[#26221e]",
             PlaywriteAUNSW.className
           )}>Save the Eagles Day</h1>
           <h2
           className={cn(
-            "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%]",
+            "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%] text-[#26221e]",
             PlaywriteAUNSW.className
           )}>Jan. 10st</h2>
           <p
           className={cn(
-            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%]",
+            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%] text-[#26221e]",
             NanumBrushScript.className
           )}>독수리 보호의 날</p>
         </div>
-        <div className="h-[50%] w-[50%] absolute inset-0 -z-10 mr-[70%]">
+        <div className="h-[35%] w-[35%] absolute inset-0 -z-10 scale-x-[-1]">
             <img
-              src="/rebrids.png" //이미지
+              src="/docsu2.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div> 
-        <div className="h-[35%] w-[22%] absolute inset-0 -z-5 mr-[94%] mt-[12%]">
+        <div className="h-[20%] w-[15%] absolute inset-0 -z-5 ml-6 mt-[15%] ">
             <img
-              src="/bbbrids.png" //이미지
+              src="/protect.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[70%] w-[40%] absolute inset-0 -z-1 ml-[60%] mt-[15%]">
+        <div className="h-[70%] w-[40%] absolute inset-0 -z-1 ml-[60vw] mt-[30vh] scale-x-[-1]">
             <img
-              src="/treebrids.png" //이미지
+              src="/hand.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-auto w-[42%] absolute inset-0 -z-10 ml-[%] mt-[23%]">
+        <div className="h-[40%] w-[20%] absolute inset-0 -z-1 ml-[72vw] mt-[40vh]">
             <img
-              src="/cutebrids.png" //이미지
+              src="/dogsu1.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[45%] w-[41%] absolute inset-0 -z-10 ml-[59%] mt-[2%]">
+        <div className="h-[50%] w-[40%] absolute inset-0 -z-10 mt-[50vh]">
             <img
-              src="/bbrids.png" //이미지
+              src="/docsu3.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
+        </div>
+        <div className="h-auto w-auto absolute inset-0 text-[10rem] text-red-400 -z-10 ml-[85vw] mt-[15vh] ">
+            <p>♥</p>
         </div>
       </div>
       
