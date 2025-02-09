@@ -78,7 +78,7 @@ export default function J1() {
             />
         </div>
       </div>
-      
     </div>
   );
 }
+
