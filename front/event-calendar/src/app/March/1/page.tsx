@@ -51,14 +51,14 @@ export default function J1() {
         </div>
         <div className="h-[50%] w-[28%] absolute inset-0 -z-10 mr-[70%]">
             <img
-              src="/kan2.png" //이미지
+              src="/wellco1.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div> 
-        <div className="h-[40%] w-[44%] absolute inset-0 -z-55 mr-[8%] mt-[32.7%]">
+        <div className="h-[57%] w-[54%] absolute inset-0 -z-55 mr-[8%] mt-[20%]">
             <img
-              src="/kan1.png" //이미지
+              src="/wellco1.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
