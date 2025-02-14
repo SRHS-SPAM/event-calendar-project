@@ -20,7 +20,6 @@ const apiClient = axios.create({
   },
 });
 
-// 회원가입 API 호출 함수
 export default function J1() {
   return (
     <div className="h-[100vh] w-[100vw]">
