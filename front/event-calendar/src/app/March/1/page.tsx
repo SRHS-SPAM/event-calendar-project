@@ -48,9 +48,9 @@ export default function J1() {
             NanumBrushScript.className
           )}>웰시코기의 날</p>
         </div>
-        <div className="h-[50%] w-[28%] absolute inset-0 -z-10 mr-[70%]">
+        <div className="h-[50%] w-[30%] absolute inset-0 -z-10 mr-[80%]">
             <img
-              src="/wellco1.png" //이미지
+              src="/wellco2.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
@@ -62,9 +62,9 @@ export default function J1() {
               className="w-full h-full"
             />
         </div>
-        <div className="h-[50%] w-[40%] absolute inset-0 -z-1 ml-[60%] mt-[27.3%]">
+        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60%] mt-[20.3%]">
             <img
-              src="/.png" //이미지
+              src="/wellco3.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
