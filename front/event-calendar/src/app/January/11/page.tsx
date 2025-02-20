@@ -50,21 +50,21 @@ export default function J1() {
         </div>
         <div className="h-[50%] w-[30%] absolute inset-0 -z-10 mr-[80%]">
             <img
-              src="/wellco2.png" //이미지
+              src="/.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div> 
         <div className="h-[57%] w-[54%] absolute inset-0 -z-55 mr-[8%] mt-[20%]">
             <img
-              src="/wellco1.png" //이미지
+              src="/.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
         <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60%] mt-[20.3%]">
             <img
-              src="/wellco3.png" //이미지
+              src="/.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
@@ -80,5 +80,3 @@ export default function J1() {
     </div>
   );
 }
-
-
