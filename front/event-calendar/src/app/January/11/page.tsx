@@ -25,7 +25,7 @@ export default function J1() {
     <div className="h-[100vh] w-[100vw]">
       <div className="h-full w-full absolute inset-0 -z-10 opacity-70">
           <img
-            src="/wcoback.jpg"
+            src="/waterd.jpg"
             alt="Background"
             className="w-full h-full object-cover"
           />
