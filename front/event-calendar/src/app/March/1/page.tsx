@@ -69,13 +69,6 @@ export default function J1() {
               className="w-full h-full"
             />
         </div>
-        <div className="h-[35%] w-[30%] absolute inset-0 -z-10 ml-[70%]">
-            <img
-              src="/.png" //이미지
-              alt="Background"
-              className="w-full h-full"
-            />
-        </div>
       </div>
     </div>
   );

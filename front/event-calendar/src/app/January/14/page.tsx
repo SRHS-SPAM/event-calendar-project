@@ -35,17 +35,17 @@ export default function J1() {
         <div className="pt-36">
           <h1
           className={cn(
-            "h-7 w-85 flex items-center justify-center text-7xl font-black text-black-500 mb-[15%] text-[#f7c92f]",
+            "h-7 w-85 flex items-center justify-center text-7xl font-black text-black-500 mb-[15%] ",
             PlaywriteAUNSW.className
           )}>Dress up Your Pet Day</h1>
           <h2
           className={cn(
-            "w-full flex items-center justify-center text-5xl font-[400] text-black-400 mb-[10%] text-[#1a94eb]",
+            "w-full flex items-center justify-center text-5xl font-[400] text-black-400 mb-[10%]",
             PlaywriteAUNSW.className
           )}>Jan. 14st</h2>
           <p
           className={cn(
-            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%] text-[#f7c92f]",
+            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%]",
             NanumBrushScript.className
           )}>반려동물 차려 입히기의 날</p>
         </div>
