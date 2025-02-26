@@ -80,7 +80,7 @@ export default function J1() {
         <div className="h-[30%] w-[35%] absolute inset-0 -z-10 scale-x-[-1] scale-y-[-1] ml-[143vh]">
             <img
               src="/paper2.png" //이미지
-              alt="paper1"
+              alt="paper2"
               className="w-full h-full"
             />
         </div>
