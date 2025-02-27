@@ -70,6 +70,13 @@ export default function J1() {
         </div>
         <div className="h-[70%] w-[40%] absolute inset-0 -z-10 mt-[30vh]">
             <img
+              src="/1_27/punch.png" //이미지
+              alt="깨진시계"
+              className="w-full h-full"
+            />
+        </div>
+        <div className="h-[70%] w-[40%] absolute inset-0 -z-10 mt-[30vh]">
+            <img
               src="/1_27/br_clock.png" //이미지
               alt="깨진시계"
               className="w-full h-full"
