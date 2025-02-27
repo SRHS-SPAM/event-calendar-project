@@ -49,27 +49,20 @@ export default function J1() {
             NanumBrushScript.className
           )}>열심히 일하기의 날</p>
         </div>
-        <div className="h-[35%] w-[35%] absolute inset-0 -z-10 scale-x-[-1]">
-            <img
-              src="/1_12/pyting.png" //이미지
-              alt="Background"
-              className="w-full h-full"
-            />
-        </div> 
         <div className="h-[20%] w-[15%] absolute inset-0 -z-5 ml-6 mt-[15%] text-[10rem] -rotate-12">
             💡
         </div>
         <div className="h-[70%] w-[40%] absolute inset-0 -z-1 ml-[60vw] mt-[30vh]">
             <img
               src="/1_12/document.png" //이미지
-              alt="Background"
+              alt="서류더미"
               className="w-full h-full"
             />
         </div>
         <div className="h-[40%] w-[20%] absolute inset-0 -z-1 ml-[76vw] mt-[60vh]">
             <img
               src="/1_12/dbag.png" //이미지
-              alt="Background"
+              alt="서류가방"
               className="w-full h-full"
             />
         </div>
@@ -83,12 +76,12 @@ export default function J1() {
         <div className="h-[50%] w-[40%] absolute inset-0 -z-10 mt-[50vh]">
             <img
               src="/1_12/pyting.png" //이미지
-              alt="Background"
+              alt="활기차게? 일하는 사람들"
               className="w-full h-full"
             />
         </div>
-        <div className="h-auto w-auto absolute inset-0 text-[10rem] text-red-400 -z-10 ml-[85vw] mt-[15vh] ">
-            <p>♥</p>
+        <div className="h-[1%] w-[1%] absolute inset-0 text-[13rem] ml-[78vw] rotate-[30deg]">
+            <p>🕶️</p>
         </div>
       </div>
       
