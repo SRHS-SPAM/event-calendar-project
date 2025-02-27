@@ -24,7 +24,12 @@ const apiClient = axios.create({
 export default function J1() {
   return (
     <div className="h-[100vh] w-[100vw]">
-      <div className="h-full w-full absolute inset-0 -z-10 bg-slate-900">
+      <div className="h-full w-full absolute inset-0 -z-10 bg-black">
+        <img
+            src="/1_27/bglass.png"
+            alt="Background"
+            className="w-full h-full object-cover opacity-70"
+          />
       </div>
       <div className="h-full w-full flex justify-center items-center">
         <div className="pt-36">
@@ -44,34 +49,17 @@ export default function J1() {
             NanumBrushScript.className
           )}>시계에 펀치 날리기의 날</p>
         </div>
-        <div className="h-[20%] w-[15%] absolute inset-0 -z-5 ml-6 mt-[15%] text-[10rem] -rotate-12">
-            💡
-        </div>
-        <div className="h-[70%] w-[40%] absolute inset-0 -z-1 ml-[60vw] mt-[30vh]">
+        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60vw] mt-[40vh]">
             <img
-              src="/1_27/br_clock.png" //이미지
-              alt="깨진시계"
+              src="/1_27/glove.png" //이미지
+              alt="복싱글러브"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[40%] w-[20%] absolute inset-0 -z-1 ml-[76vw] mt-[60vh]">
-            <img
-              src="/1_12/dbag.png" //이미지
-              alt="서류가방"
-              className="w-full h-full"
-            />
-        </div>
-        <div className="h-[50%] w-[33%] absolute inset-0 -z-10 scale-y-[-1] mt-[50vh]">
-            <img
-              src="/paper1.png" //이미지
-              alt="paper1"
-              className="w-full h-full"
-            />
-        </div>
-        <div className="h-[70%] w-[40%] absolute inset-0 -z-10 mt-[30vh]">
+        <div className="h-[40%] w-[18%] absolute inset-0 mt-[60vh]">
             <img
               src="/1_27/punch.png" //이미지
-              alt="깨진시계"
+              alt="주먹"
               className="w-full h-full"
             />
         </div>
@@ -82,8 +70,8 @@ export default function J1() {
               className="w-full h-full"
             />
         </div>
-        <div className="h-[1%] w-[1%] absolute inset-0 text-[13rem] ml-[78vw] rotate-[30deg]">
-            <p>🕶️</p>
+        <div className="h-[1%] w-[1%] absolute inset-0 text-[10rem] ml-[82vw] rotate-[30deg]">
+            <p>🕒</p>
         </div>
       </div>
       
