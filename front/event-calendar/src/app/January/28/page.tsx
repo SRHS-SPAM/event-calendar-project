@@ -5,6 +5,9 @@ import { Playwrite_ID } from "next/font/google";
 import { Nanum_Brush_Script } from "next/font/google"
 import { cn } from "@/lib/utils";
 
+import daisy2 from "../../../../public/1_28/daisy2.png"
+
+
 // API 기본 URL 설정 (백엔드 서버의 주소)
 const API_BASE_URL = "/api/users/";
 
@@ -24,11 +27,11 @@ const apiClient = axios.create({
 export default function J1() {
   return (
     <div className="h-[100vh] w-[100vw]">
-      <div className="h-full w-full absolute inset-0 -z-10 bg-black">
+      <div className="h-full w-full absolute inset-0 -z-10">
         <img
-            src="/1_27/bglass.png"
+            src="/1_28/gress2.png"
             alt="Background"
-            className="w-full h-full object-cover opacity-70"
+            className="w-full h-full object-cover opacity-80"
           />
       </div>
       <div className="h-full w-full flex justify-center items-center">
@@ -49,29 +52,43 @@ export default function J1() {
             NanumBrushScript.className
           )}>데이지의 날</p>
         </div>
-        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60vw] mt-[40vh]">
+        <div className="h-[40%] w-[40%] absolute inset-0 -z-10 scale-y-[-1] scale-x-[-1] ml-[60vw] mt-[60vh]">
             <img
-              src="/1_27/glove.png" //이미지
-              alt="복싱글러브"
+              src="/paper1.png" //이미지
+              alt="paper1"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[40%] w-[18%] absolute inset-0 mt-[60vh]">
+        <div className="h-[60%] w-[30%] absolute inset-0 -z-1 ml-[70vw] mt-[40vh]">
             <img
-              src="/1_27/punch.png" //이미지
-              alt="주먹"
+              src="/1_28/daisy2.png" //이미지
+              alt="종이 데이지"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[70%] w-[40%] absolute inset-0 -z-10 mt-[30vh]">
+        <div className="h-[35%] w-[16%] absolute inset-0 mt-[64vh]">
             <img
-              src="/1_27/br_clock.png" //이미지
-              alt="깨진시계"
+              src="/1_28/smdaisy.png" //이미지
+              alt="스마일 데이지"
+              className="w-full h-full"
+            />
+        </div>
+        <div className="h-[40%] w-[28%] absolute inset-0 mt-[46vh] ml-[15vw] scale-x-[-1] scale-y-[-1] -rotate-[90deg] -z-10">
+            <img
+              src="/1_28/daisy3.png" //이미지
+              alt="누운 데이지"
+              className="w-full h-full"
+            />
+        </div>
+        <div className="h-[70%] w-[30%] absolute inset-0 -z-10 mt-[30vh]">
+            <img
+              src="/1_28/daisy.png" //이미지
+              alt="꽃병에 담긴"
               className="w-full h-full"
             />
         </div>
         <div className="h-[1%] w-[1%] absolute inset-0 text-[10rem] ml-[82vw] rotate-[30deg]">
-            <p>🕒</p>
+            <p>😊</p>
         </div>
       </div>
       
