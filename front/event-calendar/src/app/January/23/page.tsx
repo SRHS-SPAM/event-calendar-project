@@ -26,7 +26,7 @@ export default function J1() {
     <div className="h-[100vh] w-[100vw]">
       <div className="h-full w-full absolute inset-0 -z-10 opacity-60">
           <img
-            src="/frnkback.jpg"
+            src="/pieback.jpeg"
             alt="Background"
             className="w-full h-full object-cover"
           />
@@ -37,35 +37,42 @@ export default function J1() {
           className={cn(
             "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[15%] -z-11",
             PlaywriteAUNSW.className
-          )}>Tin Can Da</h1>
+          )}>National Pie Day</h1>
           <h2
           className={cn(
             "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%]",
             PlaywriteAUNSW.className
-          )}>Jan. 19st</h2>
+          )}>Jan. 23st</h2>
           <p
           className={cn(
             "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%]",
             NanumBrushScript.className
-          )}>깡통의 날</p>
+          )}>국립 파이의 날</p>
         </div> 
         <div className="h-[45%] w-[30%] absolute inset-0 -z-10 ">
             <img
-              src="/frnk3.png" //이미지
+              src="/pumpkin-pie.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[55%] w-[50%] absolute inset-0 -z-10 ml-[%] mt-[23%]">
+        <div className="h-[60%] w-[50%] absolute inset-0 -z-10 ml-[%] mt-[17%]">
             <img
-              src="/frnk1.png" //이미지
+              src="/herring-pie.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[75%] w-[25%] absolute inset-0 -z-10 ml-[70%] mt-[10%]">
+        <div className="h-[75%] w-[40%] absolute inset-0 -z-10 ml-[50%] mt-[-10%]">
             <img
-              src="/frnk2.png" //이지
+              src="/blueberry-pie.png" //이지
+              alt="Background"
+              className="w-full h-full"
+            />
+        </div>
+        <div className="h-[75%] w-[40%] absolute inset-0 -z-10 ml-[60%] mt-[13%]">
+            <img
+              src="/apple-pie.png" //이지
               alt="Background"
               className="w-full h-full"
             />
