@@ -26,9 +26,9 @@ export default function J1() {
     <div className="h-[100vh] w-[100vw]">
       <div className="h-full w-full absolute inset-0 -z-10 bg-black">
         <img
-            src="/1_20/restaurant.png"
+            src="/1_27/bglass.png"
             alt="Background"
-            className="w-full h-full object-cover opacity-85"
+            className="w-full h-full object-cover opacity-70"
           />
       </div>
       <div className="h-full w-full flex justify-center items-center">
@@ -37,37 +37,41 @@ export default function J1() {
           className={cn(
             "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[15%] text-white",
             PlaywriteAUNSW.className
-          )}>Cheese Lovers Day</h1>
+          )}>National Daisy Day</h1>
           <h2
           className={cn(
             "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%] text-white",
             PlaywriteAUNSW.className
-          )}>Jan. 20st</h2>
+          )}>Jan. 28st</h2>
           <p
           className={cn(
             "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%] text-white",
             NanumBrushScript.className
-          )}>치즈 애호가의 날</p>
+          )}>데이지의 날</p>
         </div>
-        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60vw] mt-[40vh] scale-x-[-1]">
+        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60vw] mt-[40vh]">
             <img
-              src="/1_20/cheese.png" //이미지
-              alt="치즈"
+              src="/1_27/glove.png" //이미지
+              alt="복싱글러브"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[20%] w-[20%] absolute inset-0 text-[13rem] mt-[55vh]">
-          <p>🐭</p>
-        </div>
-        <div className="h-[90%] w-[33%] absolute inset-0 -z-10 mt-[10vh]">
+        <div className="h-[40%] w-[18%] absolute inset-0 mt-[60vh]">
             <img
-              src="/1_20/cheesebun.png" //이미지
-              alt="치즈분수"
+              src="/1_27/punch.png" //이미지
+              alt="주먹"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[1%] w-[1%] absolute inset-0 text-[10rem] ml-[82vw] rotate-[20deg]">
-            <p>🥰</p>
+        <div className="h-[70%] w-[40%] absolute inset-0 -z-10 mt-[30vh]">
+            <img
+              src="/1_27/br_clock.png" //이미지
+              alt="깨진시계"
+              className="w-full h-full"
+            />
+        </div>
+        <div className="h-[1%] w-[1%] absolute inset-0 text-[10rem] ml-[82vw] rotate-[30deg]">
+            <p>🕒</p>
         </div>
       </div>
       

@@ -24,9 +24,9 @@ const apiClient = axios.create({
 export default function J1() {
   return (
     <div className="h-[100vh] w-[100vw]">
-      <div className="h-full w-full absolute inset-0 -z-10 bg-black">
+      <div className="h-full w-full absolute inset-0 -z-10 scale-[-1]">
         <img
-            src="/1_20/restaurant.png"
+            src="/1_25/living_room.png"
             alt="Background"
             className="w-full h-full object-cover opacity-85"
           />
@@ -35,39 +35,43 @@ export default function J1() {
         <div className="pt-36">
           <h1
           className={cn(
-            "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[15%] text-white",
+            "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[15%] scale-[-1]",
             PlaywriteAUNSW.className
-          )}>Cheese Lovers Day</h1>
+          )}>Opposite Day</h1>
           <h2
           className={cn(
-            "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%] text-white",
+            "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%] scale-[-1]",
             PlaywriteAUNSW.className
-          )}>Jan. 20st</h2>
+          )}>Jan. 25st</h2>
           <p
           className={cn(
-            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%] text-white",
+            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%] ",
             NanumBrushScript.className
-          )}>치즈 애호가의 날</p>
+          )}>날 의로꾸거</p>
         </div>
-        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60vw] mt-[40vh] scale-x-[-1]">
+        <div className="h-[60%] w-[20%] absolute inset-0 -z-1 ml-[70vw] mt-[35vh] scale-x-[-1]">
             <img
-              src="/1_20/cheese.png" //이미지
-              alt="치즈"
+              src="/1_25/ban_people.png" //이미지
+              alt="거꾸로 솨람"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[20%] w-[20%] absolute inset-0 text-[13rem] mt-[55vh]">
-          <p>🐭</p>
+        <div className="h-[50%] w-[30%] absolute inset-0  mt-[50vh] ml-[15vw]">
+          <img
+              src="/1_25/ban_house.png" //이미지
+              alt="거꾸로집"
+              className="w-full h-full"
+            />
         </div>
-        <div className="h-[90%] w-[33%] absolute inset-0 -z-10 mt-[10vh]">
+        <div className="h-[85%] w-[30%] absolute inset-0 -z-10  mt-[15vh]">
             <img
-              src="/1_20/cheesebun.png" //이미지
-              alt="치즈분수"
+              src="/1_25/yagu.png" //이미지
+              alt="거꾸로 먹는 요거틓ㅎ"
               className="w-full h-full"
             />
         </div>
         <div className="h-[1%] w-[1%] absolute inset-0 text-[10rem] ml-[82vw] rotate-[20deg]">
-            <p>🥰</p>
+            <p>🙃</p>
         </div>
       </div>
       
