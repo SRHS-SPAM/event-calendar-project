@@ -25,7 +25,7 @@ export default function J1() {
     <div className="h-[100vh] w-[100vw]">
       <div className="h-full w-full absolute inset-0 -z-10 opacity-70">
           <img
-            src="/noback.png"
+            src="/zen.png"
             alt="Background"
             className="w-full h-full object-cover"
           />
@@ -39,7 +39,7 @@ export default function J1() {
           )}>Nothing Day</h1>
           <h2
           className={cn(
-            "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%]",
+            "w-full flex items-center justify-center text-5xl text-black-400 mb-[20%] mt-[30%]",
             PlaywriteAUNSW.className
           )}>Jan. 16st</h2>
           <p
