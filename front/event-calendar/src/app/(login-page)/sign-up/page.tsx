@@ -91,11 +91,33 @@ export default function SignUp() {
           <Input placeholder="Name" className="w-full h-12 mb-4" value={name} onChange={(e) => setName(e.target.value)} />
           <Input placeholder="Email" className="w-full h-12 mb-4" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <Input placeholder="Password" className="w-full h-12 mb-4" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-
-          <div className="w-full h-12 mb-4 flex justify-between gap-2">
-            <Input placeholder="YYYY" className="w-1/3 h-full text-center" type="number" inputMode="numeric" value={year} onChange={(e) => setYear(e.target.value)} />
-            <Input placeholder="MM" className="w-1/3 h-full text-center" type="number" inputMode="numeric" value={month} onChange={(e) => setMonth(e.target.value)} />
-            <Input placeholder="DD" className="w-1/3 h-full text-center" type="number" inputMode="numeric" value={day} onChange={(e) => setDay(e.target.value)} />
+          <div className="w-full h-12 mb-4 flex justify-center place-content-around">
+            <Input 
+            placeholder="YYYY" 
+            inputMode="numeric"
+            className="w-full h-full"
+            type="number"
+            maxLength={4}
+            value={year} onChange={(e) => setYear(e.target.value)}
+            />
+            <p className="w-[40%] h-full flex justify-center items-center text-xl ">-</p>
+            <Input 
+            placeholder="MM" 
+            inputMode="numeric"
+            className="w-full h-full"
+            type="number"
+            maxLength={2}
+            value={month} onChange={(e) => setMonth(e.target.value)}
+            />
+            <p className="w-[40%] h-full flex justify-center items-center text-xl">-</p>
+            <Input 
+            placeholder="DD" 
+            inputMode="numeric"
+            className="w-full h-full"
+            type="number"
+            maxLength={2}
+            value={day} onChange={(e) => setDay(e.target.value)}
+            />
           </div>
 
           <Button className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600" onClick={handleSignUp}>
