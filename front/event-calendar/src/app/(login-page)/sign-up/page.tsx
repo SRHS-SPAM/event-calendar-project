@@ -1,28 +1,29 @@
 "use client";
 
 import React from "react";
-import { format } from "date-fns";
-import { cn } from "@/lib/utils";
+import axios, { AxiosResponse } from "axios";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Playwrite_AU_NSW } from "next/font/google";
 
 const PlaywriteAUNSW = Playwrite_AU_NSW({ weight: "400" });
 
-import axios from "axios";
+// API 기본 URL 설정
+const API_BASE_URL = "http://127.0.0.1:8000/api/user/";
 
-// API 기본 URL 설정 (백엔드 서버의 주소)
-const API_BASE_URL = 'api/user/';
-
-// Axios 인스턴스 생성
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    "Content-Type": "application/json", // JSON 형식으로 데이터 전송
+    "Content-Type": "application/json",
   },
 });
 
-// 회원가입 API 호출 함수
+// 🔹 응답 데이터 타입 정의
+interface SignUpResponse {
+  success: boolean;
+  message?: string;
+}
+
 export default function SignUp() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -31,39 +32,46 @@ export default function SignUp() {
   const [month, setMonth] = React.useState("");
   const [day, setDay] = React.useState("");
 
-
   const handleSignUp = async () => {
     if (!name || !email || !password || !year || !month || !day) {
       alert("모든 필드를 입력해주세요.");
       return;
     }
 
+    if (password.length < 6) {
+      alert("비밀번호는 최소 6자리 이상이어야 합니다.");
+      return;
+    }
+
     const birthday = `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
 
     try {
-        const response = await axios.post(API_BASE_URL, {
+      // 🔹 API 응답 타입을 명확히 지정
+      const response: AxiosResponse<SignUpResponse> = await apiClient.post("/", {
         action: "register",
         username: name,
-        password: password,
-        email: email,
-        birthday: birthday, // 날짜 추가
+        password,
+        email,
+        birthday,
       });
 
-      if (response.data.success) {
-          alert("회원가입 성공!");
-          // 로그인 페이지로 이동 등의 추가 작업
+      // 🔹 response.data를 안전하게 접근
+      if (response.data?.success) {
+        alert("회원가입 성공!");
       } else {
-        alert(response.data.message); // 오류 메시지 표시
+        alert(response.data?.message || "회원가입 실패");
       }
-    } catch (error: any) {
-        console.error("Registration failed:", error);
-        alert("회원가입 실패: " + (error?.response?.data?.message || "알 수 없는 오류")); // 에러 메시지 표시
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        alert("회원가입 실패: " + (error.response?.data?.message || "알 수 없는 오류"));
+      } else {
+        alert("회원가입 중 예상치 못한 오류가 발생했습니다.");
+      }
     }
   };
 
   return (
     <div className="w-full h-full absolute z-10">
-      {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
           src="/backimg.png"
@@ -72,74 +80,25 @@ export default function SignUp() {
         />
       </div>
 
-      {/* Header */}
-      <h1
-        className={cn(
-          "h-40 w-full flex items-center justify-center text-6xl font-bold text-white",
-          PlaywriteAUNSW.className
-        )}
-      >
+      <h1 className={`h-40 w-full flex items-center justify-center text-6xl font-bold text-white ${PlaywriteAUNSW.className}`}>
         Event Calendar
       </h1>
 
-      {/* Sign-Up Form */}
       <div className="flex justify-center">
         <div className="w-[30vw] h-[60vh] rounded-xl shadow-2xl bg-white/50 relative p-6">
           <h2 className="text-3xl font-bold text-center mb-6">Sign Up</h2>
-          
-          <Input 
-          placeholder="Name" 
-          className="w-full h-12 mb-4"
-          value={name}
-          onChange={(e) => setName(e.target.value)} 
-          />
 
-          <Input
-            placeholder="email"
-            className="w-full h-12 mb-4"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <Input placeholder="Name" className="w-full h-12 mb-4" value={name} onChange={(e) => setName(e.target.value)} />
+          <Input placeholder="Email" className="w-full h-12 mb-4" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <Input placeholder="Password" className="w-full h-12 mb-4" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-          <Input 
-          placeholder="Password" 
-          className="w-full h-12 mb-4"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)} 
-          />
-
-          <div className="w-full h-12 mb-4 flex justify-center place-content-around">
-            <Input 
-            placeholder="YYYY" 
-            className="w-full h-full"
-            type="number"
-            maxLength={4}
-            value={year} onChange={(e) => setYear(e.target.value)}
-            />
-            <p className="w-[40%] h-full flex justify-center items-center text-xl ">-</p>
-            <Input 
-            placeholder="MM" 
-            className="w-full h-full"
-            type="number"
-            maxLength={2}
-            value={month} onChange={(e) => setMonth(e.target.value)}
-            />
-            <p className="w-[40%] h-full flex justify-center items-center text-xl">-</p>
-            <Input 
-            placeholder="DD" 
-            className="w-full h-full"
-            type="number"
-            maxLength={2}
-            value={day} onChange={(e) => setDay(e.target.value)}
-            />
+          <div className="w-full h-12 mb-4 flex justify-between gap-2">
+            <Input placeholder="YYYY" className="w-1/3 h-full text-center" type="number" inputMode="numeric" value={year} onChange={(e) => setYear(e.target.value)} />
+            <Input placeholder="MM" className="w-1/3 h-full text-center" type="number" inputMode="numeric" value={month} onChange={(e) => setMonth(e.target.value)} />
+            <Input placeholder="DD" className="w-1/3 h-full text-center" type="number" inputMode="numeric" value={day} onChange={(e) => setDay(e.target.value)} />
           </div>
 
-          <Button 
-          className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600"
-          onClick={handleSignUp}
-          >
+          <Button className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600" onClick={handleSignUp}>
             Sign Up
           </Button>
         </div>
