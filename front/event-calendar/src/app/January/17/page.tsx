@@ -38,19 +38,24 @@ export default function J1() {
         <div className="pt-36">
           <h1
           className={cn(
+            "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[10%] text-white",
+            PlaywriteAUNSW.className
+          )}>New Year's Resolution</h1>
+          <h1
+          className={cn(
             "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[15%] text-white",
             PlaywriteAUNSW.className
-          )}>National Daisy Day</h1>
+          )}>Reeommitment Day</h1>
           <h2
           className={cn(
-            "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%] text-white",
+            "w-full flex items-center justify-center text-5xl text-black-300 mb-[10%] text-white",
             PlaywriteAUNSW.className
           )}>Jan. 28st</h2>
           <p
           className={cn(
-            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%] text-white",
+            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[10%] text-white",
             NanumBrushScript.className
-          )}>데이지의 날</p>
+          )}>새해 결심 다지기의 날</p>
         </div>
         <div className="h-[40%] w-[40%] absolute inset-0 -z-10 scale-y-[-1] scale-x-[-1] ml-[60vw] mt-[60vh]">
             <img
