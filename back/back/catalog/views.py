@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 import json
 from django.urls import path, reverse
+from rest_framework.decorators import api_view
 
 from django.contrib.auth.backends import BaseBackend
 from django.contrib.auth.models import User
@@ -31,6 +32,7 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 
 @csrf_exempt
+@api_view(['POST', 'OPTIONS'])
 def validate_and_process_user(request):
     if request.method == 'POST':
         try:
