@@ -53,6 +53,11 @@ export default function SignUp() {
         password,
         email,
         birthday,
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        }
       });
 
       // 🔹 response.data를 안전하게 접근
