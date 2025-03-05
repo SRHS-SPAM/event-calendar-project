@@ -23,13 +23,14 @@ class EmailBackend(BaseBackend):
 
 
 # 데이터 검증 및 처리 API
-from django.views.decorators.csrf import csrf_exempt
-
+from django.contrib.auth import get_user_model
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
 import json
+
+User = get_user_model()
 
 @csrf_exempt
 @api_view(['POST', 'OPTIONS'])
@@ -38,7 +39,7 @@ def validate_and_process_user(request):
         try:
             # JSON 데이터 파싱
             data = json.loads(request.body)
-            action = data.get('action')  # 클라이언트가 요청한 작업 (예: 'register', 'login')
+            action = data.get('action')
             username = data.get('username')
             password = data.get('password')
             email = data.get('email', '')
@@ -48,13 +49,23 @@ def validate_and_process_user(request):
                 # 회원가입 처리
                 if User.objects.filter(email=email).exists():
                     return JsonResponse({'success': False, 'message': "이미 있는 이메일입니다."}, status=400)
-                user = User.objects.create_user(username=username, password=password, email=email, birthday=birthday)
-                user.save()
+                
+                user = User.objects.create_user(
+                    username=username, 
+                    password=password, 
+                    email=email
+                )
+                
+                # birthday가 제공되었다면 별도로 설정
+                if birthday:
+                    user.birthday = birthday
+                    user.save()
+                
                 return JsonResponse({'success': True, 'message': "회원가입에 성공했습니다."}, status=201)
 
             elif action == 'login':
                 # 로그인 처리
-                user = authenticate(request, email=email, password=password)  # email 전달
+                user = authenticate(request, username=email, password=password)
                 if user is not None:
                     login(request, user)
                     return JsonResponse({

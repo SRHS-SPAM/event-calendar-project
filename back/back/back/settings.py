@@ -84,6 +84,8 @@ CORS_ALLOW_METHODS = [  # 허용할 HTTP 메서드 추가
     'OPTIONS'  # OPTIONS 요청 허용 (preflight 요청 해결)
 ]
 
+AUTH_USER_MODEL = 'catalog.CustomUser'
+
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
