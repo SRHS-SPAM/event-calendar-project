@@ -38,7 +38,7 @@ export default function J1() {
           className={cn(
             "w-full flex items-center justify-center text-5xl text-black-300 mb-[10%] text-white",
             PlaywriteAUNSW.className
-          )}>Jan. 28st</h2>
+          )}>Jan. 17st</h2>
           <p
           className={cn(
             "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[10%] text-white",
