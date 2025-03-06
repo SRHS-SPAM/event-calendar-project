@@ -26,7 +26,7 @@ export default function J1() {
     <div className="h-[100vh] w-[100vw]">
       <div className="h-full w-full absolute inset-0 -z-10 opacity-60">
           <img
-            src="/dinoback.jpg"
+            src="/macnback.jpg"
             alt="Background"
             className="w-full h-full object-cover"
           />
@@ -37,35 +37,28 @@ export default function J1() {
           className={cn(
             "h-7 w-85 flex items-center justify-center text-7xl font-bold text-black-500 mb-[15%] -z-11",
             PlaywriteAUNSW.className
-          )}>Draw a Dinosaur Day</h1>
+          )}>Macintosh Computer Day</h1>
           <h2
           className={cn(
             "w-full flex items-center justify-center text-5xl text-black-400 mb-[10%]",
             PlaywriteAUNSW.className
-          )}>Jan. 30st</h2>
+          )}>Jan. 24st</h2>
           <p
           className={cn(
             "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20%]",
             NanumBrushScript.className
-          )}>공룡 그리기의 날</p>
+          )}>매킨토시 컴퓨터의 날</p>
         </div> 
-        <div className="h-[70%] w-[40%] absolute inset-0 -z-10">
+        <div className="h-[60%] w-[45%] absolute inset-0 -z-10 ml-[55%] mt-[21%]">
             <img
-              src="/dino2.png" //이미지
+              src="/macn2.png" //이지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[70%] w-[45%] absolute inset-0 -z-10 ml-[55%] mt-[15.5%]">
+        <div className="h-[40%] w-[30%] absolute inset-0 -z-10 mt-[31.2%] ml-[5%]">
             <img
-              src="/dino1.png" //이지
-              alt="Background"
-              className="w-full h-full"
-            />
-        </div>
-        <div className="h-[30%] w-[20%] absolute inset-0 -z-10 mt-[38.2%] ml-[5%]">
-            <img
-              src="/dino3.png" //이미지
+              src="/macn1.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
