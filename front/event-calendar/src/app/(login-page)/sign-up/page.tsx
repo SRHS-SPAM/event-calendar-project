@@ -100,7 +100,7 @@ export default function SignUp() {
           <div className="w-[30vw] h-[63vh] bg-white opacity-40 rounded-xl absolute -z-10 shadow-2xl"></div>
           <h2 className="h-[18%] w-full text-3xl font-bold flex items-center justify-center">회원가입</h2>
           <div className="px-6">
-            <Input placeholder="Name" className="w-full h-12 mb-4" value={name} onChange={(e) => setName(e.target.value)} />
+            <Input placeholder="User ID" className="w-full h-12 mb-4" value={name} onChange={(e) => setName(e.target.value)} />
             <Input placeholder="Email" className="w-full h-12 mb-4" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <Input placeholder="Password" className="w-full h-12 mb-4" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             <div className="w-full h-12 mb-4 flex justify-center place-content-around">

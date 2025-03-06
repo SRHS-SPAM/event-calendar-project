@@ -103,14 +103,14 @@ export default function Login() {
                     <h2 className="h-[23%] w-full text-3xl font-bold flex items-center justify-center">로그인</h2>
                     <div className="px-6">
                         <Input 
-                            placeholder="이메일" 
+                            placeholder="ID 입력" 
                             className="w-full h-12 mb-4" 
                             type="email" 
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)} 
                         />
                         <Input 
-                            placeholder="비밀번호" 
+                            placeholder="비밀번호 입력" 
                             className="w-full h-12 mb-4" 
                             type="password" 
                             value={password} 

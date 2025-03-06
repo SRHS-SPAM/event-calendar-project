@@ -26,7 +26,7 @@ const monthNames = [
 ];
 
 export default function Link() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [debugInfo, setDebugInfo] = useState<string | null>(null);
   const router = useRouter();
@@ -86,6 +86,11 @@ export default function Link() {
     }
   };
 
+  // 컴포넌트가 마운트될 때 자동으로 날짜 정보를 가져옴
+  useEffect(() => {
+    fetchCurrentDate();
+  }, []);
+
   return (
     <div className="p-8 max-w-md mx-auto">
       <h1 className="text-2xl font-bold mb-4">날짜 기반 페이지 리다이렉션</h1>
@@ -93,6 +98,13 @@ export default function Link() {
       {error && (
         <div className="p-4 mb-4 bg-red-100 text-red-700 rounded-md">
           {error}
+          <Button 
+            onClick={fetchCurrentDate} 
+            disabled={isLoading}
+            className="mt-4 bg-blue-500 hover:bg-blue-600 text-white"
+          >
+            {isLoading ? "처리 중..." : "다시 시도"}
+          </Button>
         </div>
       )}
       
@@ -106,16 +118,6 @@ export default function Link() {
       {isLoading && (
         <p className="mb-4">날짜 정보를 불러오는 중...</p>
       )}
-      
-      <div className="flex flex-col gap-4">
-        <Button 
-          onClick={fetchCurrentDate} 
-          disabled={isLoading}
-          className="bg-blue-500 hover:bg-blue-600 text-white"
-        >
-          {isLoading ? "처리 중..." : "날짜별 페이지로 이동"}
-        </Button>
-      </div>
     </div>
   );
 }
