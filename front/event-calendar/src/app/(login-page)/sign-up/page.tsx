@@ -5,6 +5,7 @@ import axios, { AxiosResponse } from "axios";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Playwrite_AU_NSW } from "next/font/google";
+import { useState } from 'react';
 import Link from "next/link";
 
 
@@ -33,6 +34,7 @@ export default function SignUp() {
   const [year, setYear] = React.useState("");
   const [month, setMonth] = React.useState("");
   const [day, setDay] = React.useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSignUp = async () => {
     if (!name || !email || !password || !year || !month || !day) {
@@ -74,6 +76,8 @@ export default function SignUp() {
       } else {
         alert("회원가입 중 예상치 못한 오류가 발생했습니다.");
       }
+    } finally {
+        setIsLoading(false);
     }
   };
 
@@ -91,52 +95,54 @@ export default function SignUp() {
         Event Calendar
       </h1>
 
-      <div className="flex justify-center">
-        <div className="w-[35vw] h-[63vh] rounded-xl shadow-2xl bg-white/50 relative p-6">
-          <h2 className="text-3xl font-bold text-center mb-6">Sign Up</h2>
+      <div className="flex justify-center ">
+        <div className="w-[30vw] h-[63vh] rounded-xl shadow-2xl relative">
+          <div className="w-[30vw] h-[63vh] bg-white opacity-40 rounded-xl absolute -z-10 shadow-2xl"></div>
+          <h2 className="h-[18%] w-full text-3xl font-bold flex items-center justify-center">Sign Up</h2>
+          <div className="px-6">
+            <Input placeholder="Name" className="w-full h-12 mb-4" value={name} onChange={(e) => setName(e.target.value)} />
+            <Input placeholder="Email" className="w-full h-12 mb-4" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <Input placeholder="Password" className="w-full h-12 mb-4" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <div className="w-full h-12 mb-4 flex justify-center place-content-around">
+              <Input 
+              placeholder="YYYY" 
+              inputMode="numeric"
+              className="w-full h-full"
+              type="number"
+              maxLength={4}
+              value={year} onChange={(e) => setYear(e.target.value)}
+              />
+              <p className="w-[40%] h-full flex justify-center items-center text-xl ">-</p>
+              <Input 
+              placeholder="MM" 
+              inputMode="numeric"
+              className="w-full h-full"
+              type="number"
+              maxLength={2}
+              value={month} onChange={(e) => setMonth(e.target.value)}
+              />
+              <p className="w-[40%] h-full flex justify-center items-center text-xl">-</p>
+              <Input 
+              placeholder="DD" 
+              inputMode="numeric"
+              className="w-full h-full"
+              type="number"
+              maxLength={2}
+              value={day} onChange={(e) => setDay(e.target.value)}
+              />
+            </div>
 
-          <Input placeholder="Name" className="w-full h-12 mb-4" value={name} onChange={(e) => setName(e.target.value)} />
-          <Input placeholder="Email" className="w-full h-12 mb-4" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <Input placeholder="Password" className="w-full h-12 mb-4" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <div className="w-full h-12 mb-4 flex justify-center place-content-around">
-            <Input 
-            placeholder="YYYY" 
-            inputMode="numeric"
-            className="w-full h-full"
-            type="number"
-            maxLength={4}
-            value={year} onChange={(e) => setYear(e.target.value)}
-            />
-            <p className="w-[40%] h-full flex justify-center items-center text-xl ">-</p>
-            <Input 
-            placeholder="MM" 
-            inputMode="numeric"
-            className="w-full h-full"
-            type="number"
-            maxLength={2}
-            value={month} onChange={(e) => setMonth(e.target.value)}
-            />
-            <p className="w-[40%] h-full flex justify-center items-center text-xl">-</p>
-            <Input 
-            placeholder="DD" 
-            inputMode="numeric"
-            className="w-full h-full"
-            type="number"
-            maxLength={2}
-            value={day} onChange={(e) => setDay(e.target.value)}
-            />
-          </div>
+            <Button 
+              className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600"
+              onClick={handleSignUp}
+              disabled={isLoading}>
+              {isLoading ? '로그인 중...' : '로그인'}
+            </Button>
 
-          <Button className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600" onClick={handleSignUp}>
-            Sign Up
-          </Button>
-
-          <div className="w-full h-[11%] flex justify-center items-center">
-            <div className="w-auto h-auto">
-            <Link href="/sign-in" className="w-full h-12 text-base hover:text-blue-600">로그인 하기 →</Link>
+            <div className="mt-4 text-center">
+               <p>계정이 없으신가요? <Link href="/sign-in" className="text-red-500 hover:underline">로그인</Link></p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
