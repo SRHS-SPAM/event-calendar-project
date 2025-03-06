@@ -100,7 +100,7 @@ export default function Login() {
             <div className="flex justify-center">
                 <div className="w-[30vw] h-[54vh] rounded-xl shadow-2xl">
                     <div className="w-[30vw] h-[54vh] bg-white opacity-40 rounded-xl absolute -z-10 shadow-2xl"></div>
-                    <h2 className="h-[23%] w-full text-3xl font-bold flex items-center justify-center">Sign In</h2>
+                    <h2 className="h-[23%] w-full text-3xl font-bold flex items-center justify-center">로그인</h2>
                     <div className="px-6">
                         <Input 
                             placeholder="이메일" 
