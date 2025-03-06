@@ -73,7 +73,7 @@ export default function Login() {
           }
           
           alert("로그인 성공!");
-          router.push('/dashboard'); // 대시보드 페이지로 이동
+          router.push('/'); // 대시보드 페이지로 이동
         } else {
           alert(response.data?.message || "로그인 실패");
         }
