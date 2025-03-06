@@ -140,7 +140,7 @@ export default function SignUp() {
             </Button>
 
             <div className="mt-4 text-center">
-               <p>계정이 없으신가요? <Link href="/sign-in" className="text-red-500 hover:underline">로그인</Link></p>
+               <p>계정이 이미 있으신가요? <Link href="/sign-in" className="text-red-500 hover:underline">로그인</Link></p>
             </div>
           </div>
         </div>
