@@ -5,6 +5,8 @@ import axios, { AxiosResponse } from "axios";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Playwrite_AU_NSW } from "next/font/google";
+import Link from "next/link";
+
 
 const PlaywriteAUNSW = Playwrite_AU_NSW({ weight: "400" });
 
@@ -90,7 +92,7 @@ export default function SignUp() {
       </h1>
 
       <div className="flex justify-center">
-        <div className="w-[30vw] h-[60vh] rounded-xl shadow-2xl bg-white/50 relative p-6">
+        <div className="w-[35vw] h-[63vh] rounded-xl shadow-2xl bg-white/50 relative p-6">
           <h2 className="text-3xl font-bold text-center mb-6">Sign Up</h2>
 
           <Input placeholder="Name" className="w-full h-12 mb-4" value={name} onChange={(e) => setName(e.target.value)} />
@@ -128,6 +130,13 @@ export default function SignUp() {
           <Button className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600" onClick={handleSignUp}>
             Sign Up
           </Button>
+
+          <div className="w-full h-[11%] flex justify-center items-center">
+            <div className="w-auto h-auto">
+            <Link href="/sign-in" className="w-full h-12 text-base hover:text-blue-600">로그인 하기 →</Link>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
