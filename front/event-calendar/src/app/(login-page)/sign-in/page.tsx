@@ -25,8 +25,9 @@ export default function SignUp() {
                 <div className="w-[30vw] h-[54vh] rounded-xl shadow-2xl ">
                     <div className="w-[29.9vw] h-[53.7vh] bg-white opacity-40 rounded-xl absolute -z-10 shadow-2xl"></div>
                     <h2 className="h-[23%] w-full  text-3xl font-bold flex items-center justify-center ">Sign In</h2>
-                    <Input placeholder="Phone number" className="w-[80%] h-[14%] ms-[10%] mt-[3%]" />
-                    <Input placeholder="Name" className="w-[80%] h-[14%] ms-[10%] mt-[3%]" />
+                    <Input placeholder="Email" className="w-[80%] h-[14%] ms-[10%] mt-[3%]" />
+                    <Input placeholder="Passworld" className="w-[80%] h-[14%] ms-[10%] mt-[3%]" />
+
                     <Button className="w-[80%] h-[14%] ms-[10%] mt-[15%] font-bold text-base bg-red-500 hover:bg-red-600">Sign up</Button>
                     
                 </div>
