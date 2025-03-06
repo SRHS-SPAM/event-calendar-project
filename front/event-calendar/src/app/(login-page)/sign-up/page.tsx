@@ -98,7 +98,7 @@ export default function SignUp() {
       <div className="flex justify-center ">
         <div className="w-[30vw] h-[63vh] rounded-xl shadow-2xl relative">
           <div className="w-[30vw] h-[63vh] bg-white opacity-40 rounded-xl absolute -z-10 shadow-2xl"></div>
-          <h2 className="h-[18%] w-full text-3xl font-bold flex items-center justify-center">Sign Up</h2>
+          <h2 className="h-[18%] w-full text-3xl font-bold flex items-center justify-center">회원가입</h2>
           <div className="px-6">
             <Input placeholder="Name" className="w-full h-12 mb-4" value={name} onChange={(e) => setName(e.target.value)} />
             <Input placeholder="Email" className="w-full h-12 mb-4" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -136,7 +136,7 @@ export default function SignUp() {
               className="w-full h-12 font-bold text-base bg-red-500 hover:bg-red-600"
               onClick={handleSignUp}
               disabled={isLoading}>
-              {isLoading ? '로그인 중...' : '로그인'}
+              {isLoading ? '회원가입 중...' : '회원가입'}
             </Button>
 
             <div className="mt-4 text-center">
