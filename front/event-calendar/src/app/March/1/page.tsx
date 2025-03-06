@@ -44,7 +44,7 @@ export default function J1() {
           )}>Mar. 1st</h2>
           <p
           className={cn(
-            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 z-5 mt-[20%]",
+            "h-7 w-85 flex items-center justify-center text-6xl font-bold text-black-500 mt-[20vh]",
             NanumBrushScript.className
           )}>웰시코기의 날</p>
         </div>
@@ -55,14 +55,14 @@ export default function J1() {
               className="w-full h-full"
             />
         </div> 
-        <div className="h-[57%] w-[54%] absolute inset-0 -z-55 mr-[8%] mt-[20%]">
+        <div className="h-[57%] w-[54%] absolute inset-0 -z-55 mr-[8%] mt-[40vh]">
             <img
               src="/wellco1.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60%] mt-[20.3%]">
+        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60%] mt-[40vh]">
             <img
               src="/wellco3.png" //이미지
               alt="Background"
