@@ -48,23 +48,23 @@ export default function J1() {
             NanumBrushScript.className
           )}>오레오쿠키의 날</p>
         </div>
-        <div className="h-[50%] w-[30%] absolute inset-0 -z-10 mr-[80%]">
+        <div className="h-[50%] w-[40%] absolute inset-0 -z-10 mr-[80%]">
             <img
-              src="/wellco2.png" //이미지
+              src="/oreo1.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div> 
-        <div className="h-[57%] w-[54%] absolute inset-0 -z-55 mr-[8%] mt-[20%]">
+        <div className="h-[50%] w-[50%] absolute inset-0 -z-10 mr-[%] mt-[27.3%]">
             <img
-              src="/wellco1.png" //이미지
+              src="/oreo3.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
         </div>
-        <div className="h-[60%] w-[40%] absolute inset-0 -z-1 ml-[60%] mt-[20.3%]">
+        <div className="h-[52%] w-[40%] absolute inset-0 -z-1 ml-[60%] mt-[26%]">
             <img
-              src="/wellco3.png" //이미지
+              src="/oreo2.png" //이미지
               alt="Background"
               className="w-full h-full"
             />
