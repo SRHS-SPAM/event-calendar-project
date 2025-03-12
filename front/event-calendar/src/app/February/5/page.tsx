@@ -38,9 +38,11 @@ export default function F5() {
           )}>초콜릿 퐁듀의 날</p>
         </div>
         <div className="h-[58%] w-[40%] absolute inset-0 -z-1 ml-[60vw] mt-[42vh]">
-            <img
+            <Image
               src="/2_5/fondue.png" //이미지
               alt="퐁듀"
+              width={200}
+              height={200}
               className="w-full h-full"
             />
         </div>

@@ -26,9 +26,9 @@ const monthNames = [
 ];
 
 export default function Link() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true); //로딩이 애초에 true
   const [error, setError] = useState<string | null>(null);
-  const [debugInfo, setDebugInfo] = useState<string | null>(null);
+  const [debugInfo, setDebugInfo] = useState<string | null>(null); //디버그 보여주는 그런거인듯
   const router = useRouter();
 
   // 날짜를 가져오고 처리하는 함수
@@ -40,7 +40,7 @@ export default function Link() {
     try {
       console.log("API 호출 시작...");
       
-      const response = await apiClient.get("/");
+      const response = await apiClient.get("/"); //얜 get으로 가져 왔네
       console.log("API 응답:", response.data);
       
       // 응답 구조 디버깅

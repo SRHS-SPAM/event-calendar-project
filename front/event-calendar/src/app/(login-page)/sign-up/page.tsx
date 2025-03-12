@@ -49,6 +49,8 @@ export default function SignUp() {
 
     const birthday = `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
 
+    setIsLoading(true);  // 여기서 부터 로딩상태를 true로 했네
+
     try {
       // 🔹 API 응답 타입을 명확히 지정
       const response: AxiosResponse<SignUpResponse> = await apiClient.post("/", {
